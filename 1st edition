@@ -1,0 +1,22 @@
+# Mystery Number Guessing Game
+import random
+guessTaken = 0
+
+name=input('Hi, welcome to the game. What is your name? ')
+print('Well ' + name + ' i am thinking of a number between 1 to 10000')
+
+answer=(random.randint(1,100))
+
+while guessTaken <100:
+    print('Make a Guess')
+    guess=int(input())
+
+    guessTaken = guessTaken + 1
+
+    if guess==answer:
+        print('Congratulation!! You have the correct answer!!')
+        break
+    if guess<=answer:
+            print('Too low, Between '+str(guess)+' and '+str(100))
+    if guess>=answer:
+            print('Too high, Between '+str(100)+' and '+str(guess))
